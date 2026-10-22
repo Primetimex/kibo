@@ -1,0 +1,15 @@
+{
+  "offsets": {
+    "trading_agent.log": 2924731,
+    "crypto_agent.log": 15259368,
+    "futures_agent.log": 9084261,
+    "penny_agent.log": 12884130,
+    "orb_v2_agent.log": 40294927,
+    "orb_agent.log": 5112,
+    "zone_scanner.log": 5792435,
+    "explosion_agent.log": 31484343,
+    "market_scanner.log": 155891793,
+    "crypto_scanner.log": 37999312,
+    "kibo_strategy_agent.log": 17431401
+  }
+}

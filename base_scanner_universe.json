@@ -1,0 +1,1848 @@
+{
+ "date": "2026-10-22",
+ "by_sector": {
+  "Energy": {
+   "XPRO": {
+    "name": "Expro Ltd",
+    "sector": "Energy",
+    "mcap": 1747029376.0
+   },
+   "WTI": {
+    "name": "W&T Offshore, Inc.",
+    "sector": "Energy",
+    "mcap": 587922752.0
+   },
+   "WKC": {
+    "name": "World Kinect Corporation",
+    "sector": "Energy",
+    "mcap": 1856036480.0
+   },
+   "WHK": {
+    "name": "WhiteHawk Minerals Corp",
+    "sector": "Energy",
+    "mcap": 657391104.0
+   },
+   "VTS": {
+    "name": "Vitesse Energy, Inc.",
+    "sector": "Energy",
+    "mcap": 754509376.0
+   },
+   "VTOL": {
+    "name": "Bristow Group, Inc.",
+    "sector": "Energy",
+    "mcap": 1128322688.0
+   },
+   "UROY": {
+    "name": "Uranium Royalty Corp.",
+    "sector": "Energy",
+    "mcap": 1289912960.0
+   },
+   "TXO": {
+    "name": "TXO Partners, L.P.",
+    "sector": "Energy",
+    "mcap": 765437696.0
+   },
+   "TTI": {
+    "name": "Tetra Technologies, Inc.",
+    "sector": "Energy",
+    "mcap": 744806144.0
+   },
+   "TK": {
+    "name": "Teekay Corporation Ltd.",
+    "sector": "Energy",
+    "mcap": 1243463680.0
+   },
+   "TEN": {
+    "name": "Tsakos Energy Navigation Ltd",
+    "sector": "Energy",
+    "mcap": 1580795392.0
+   },
+   "TBN": {
+    "name": "Tamboran Resources Corporation",
+    "sector": "Energy",
+    "mcap": 1018734592.0
+   },
+   "SOC": {
+    "name": "Sable Offshore Corp.",
+    "sector": "Energy",
+    "mcap": 583283456.0
+   },
+   "SD": {
+    "name": "SandRidge Energy, Inc.",
+    "sector": "Energy",
+    "mcap": 526839968.0
+   },
+   "SBR": {
+    "name": "Sabine Royalty Trust",
+    "sector": "Energy",
+    "mcap": 1066333312.0
+   },
+   "RES": {
+    "name": "RPC, Inc.",
+    "sector": "Energy",
+    "mcap": 1342133120.0
+   },
+   "REPX": {
+    "name": "Riley Exploration Permian, Inc.",
+    "sector": "Energy",
+    "mcap": 1112025856.0
+   },
+   "PUMP": {
+    "name": "ProPetro Holding Corp.",
+    "sector": "Energy",
+    "mcap": 907668736.0
+   },
+   "PDS": {
+    "name": "Precision Drilling Corporation",
+    "sector": "Energy",
+    "mcap": 1142124160.0
+   },
+   "PBT": {
+    "name": "Permian Basin Royalty Trust",
+    "sector": "Energy",
+    "mcap": 1553932672.0
+   },
+   "OBE": {
+    "name": "Obsidian Energy Ltd.",
+    "sector": "Energy",
+    "mcap": 766343104.0
+   },
+   "NVGS": {
+    "name": "Navigator Holdings Ltd.",
+    "sector": "Energy",
+    "mcap": 1317182848.0
+   },
+   "NEXT": {
+    "name": "NextDecade Corporation",
+    "sector": "Energy",
+    "mcap": 1547868288.0
+   },
+   "NESR": {
+    "name": "National Energy Services Reunit",
+    "sector": "Energy",
+    "mcap": 1972156032.0
+   },
+   "NBR": {
+    "name": "Nabors Industries Ltd.",
+    "sector": "Energy",
+    "mcap": 1182057088.0
+   },
+   "NAT": {
+    "name": "Nordic American Tankers Limited",
+    "sector": "Energy",
+    "mcap": 1612481152.0
+   },
+   "MNR": {
+    "name": "Mach Natural Resources LP",
+    "sector": "Energy",
+    "mcap": 1779666688.0
+   },
+   "KOS": {
+    "name": "Kosmos Energy Ltd.",
+    "sector": "Energy",
+    "mcap": 1631636224.0
+   },
+   "ISOU": {
+    "name": "IsoEnergy Ltd.",
+    "sector": "Energy",
+    "mcap": 535102688.0
+   },
+   "INVX": {
+    "name": "Innovex International, Inc.",
+    "sector": "Energy",
+    "mcap": 1958203136.0
+   },
+   "HPK": {
+    "name": "HighPeak Energy, Inc.",
+    "sector": "Energy",
+    "mcap": 1412477824.0
+   },
+   "GRNT": {
+    "name": "Granite Ridge Resources, Inc.",
+    "sector": "Energy",
+    "mcap": 743917312.0
+   },
+   "GPRK": {
+    "name": "Geopark Ltd",
+    "sector": "Energy",
+    "mcap": 735593344.0
+   },
+   "GLP": {
+    "name": "Global Partners LP",
+    "sector": "Energy",
+    "mcap": 1634905728.0
+   },
+   "GFR": {
+    "name": "Greenfire Resources Ltd.",
+    "sector": "Energy",
+    "mcap": 1599953152.0
+   },
+   "GEL": {
+    "name": "Genesis Energy, L.P.",
+    "sector": "Energy",
+    "mcap": 1697556992.0
+   },
+   "FTK": {
+    "name": "Flotek Industries, Inc.",
+    "sector": "Energy",
+    "mcap": 844660352.0
+   },
+   "FLNG": {
+    "name": "FLEX LNG Ltd.",
+    "sector": "Energy",
+    "mcap": 1517832064.0
+   },
+   "FET": {
+    "name": "Forum Energy Technologies, Inc.",
+    "sector": "Energy",
+    "mcap": 929288640.0
+   },
+   "EGY": {
+    "name": "VAALCO Energy, Inc.",
+    "sector": "Energy",
+    "mcap": 649559232.0
+   },
+   "DNN": {
+    "name": "Denison Mines Corp",
+    "sector": "Energy",
+    "mcap": 1977987840.0
+   },
+   "DMLP": {
+    "name": "Dorchester Minerals, L.P.",
+    "sector": "Energy",
+    "mcap": 1467342208.0
+   },
+   "DEC": {
+    "name": "Diversified Energy Company",
+    "sector": "Energy",
+    "mcap": 991374400.0
+   },
+   "CAPL": {
+    "name": "CrossAmerica Partners LP",
+    "sector": "Energy",
+    "mcap": 840575104.0
+   },
+   "BORR": {
+    "name": "Borr Drilling Limited",
+    "sector": "Energy",
+    "mcap": 1260274560.0
+   },
+   "APC": {
+    "name": "ARKO Petroleum Corp.",
+    "sector": "Energy",
+    "mcap": 764929216.0
+   },
+   "AESI": {
+    "name": "Atlas Energy Solutions Inc.",
+    "sector": "Energy",
+    "mcap": 1131644672.0
+   },
+   "ACDC": {
+    "name": "ProFrac Holding Corp.",
+    "sector": "Energy",
+    "mcap": 722116736.0
+   }
+  },
+  "Healthcare": {
+   "ZVRA": {
+    "name": "Zevra Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 611356032.0
+   },
+   "ZBIO": {
+    "name": "Zenas BioPharma, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1840590720.0
+   },
+   "XRAY": {
+    "name": "DENTSPLY SIRONA Inc.",
+    "sector": "Healthcare",
+    "mcap": 1876916736.0
+   },
+   "XNCR": {
+    "name": "Xencor, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1838016000.0
+   },
+   "XERS": {
+    "name": "Xeris Biopharma Holdings, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1976352128.0
+   },
+   "WVE": {
+    "name": "Wave Life Sciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 658140864.0
+   },
+   "WGS": {
+    "name": "GeneDx Holdings Corp.",
+    "sector": "Healthcare",
+    "mcap": 1911028480.0
+   },
+   "WEAV": {
+    "name": "Weave Communications, Inc.",
+    "sector": "Healthcare",
+    "mcap": 594931072.0
+   },
+   "VSTM": {
+    "name": "Verastem, Inc.",
+    "sector": "Healthcare",
+    "mcap": 873937152.0
+   },
+   "VREX": {
+    "name": "Varex Imaging Corporation",
+    "sector": "Healthcare",
+    "mcap": 781752064.0
+   },
+   "VOR": {
+    "name": "Vor Biopharma Inc.",
+    "sector": "Healthcare",
+    "mcap": 1105151744.0
+   },
+   "VIR": {
+    "name": "Vir Biotechnology, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1731925248.0
+   },
+   "VALN": {
+    "name": "Valneva SE",
+    "sector": "Healthcare",
+    "mcap": 512046656.0
+   },
+   "USPH": {
+    "name": "U.S. Physical Therapy, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1310063616.0
+   },
+   "URGN": {
+    "name": "UroGen Pharma Ltd.",
+    "sector": "Healthcare",
+    "mcap": 1674648064.0
+   },
+   "TYRA": {
+    "name": "Tyra Biosciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1434936448.0
+   },
+   "TSHA": {
+    "name": "Taysha Gene Therapies, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1300075776.0
+   },
+   "TRVI": {
+    "name": "Trevi Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1824403200.0
+   },
+   "TRAX": {
+    "name": "First Tracks Biotherapeutics, I",
+    "sector": "Healthcare",
+    "mcap": 1524277760.0
+   },
+   "TNDM": {
+    "name": "Tandem Diabetes Care, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1165791104.0
+   },
+   "TDOC": {
+    "name": "Teladoc Health, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1146426112.0
+   },
+   "TCMD": {
+    "name": "Tactile Systems Technology, Inc",
+    "sector": "Healthcare",
+    "mcap": 532895008.0
+   },
+   "SVRA": {
+    "name": "Savara, Inc.",
+    "sector": "Healthcare",
+    "mcap": 939979520.0
+   },
+   "STTK": {
+    "name": "Shattuck Labs, Inc.",
+    "sector": "Healthcare",
+    "mcap": 553001536.0
+   },
+   "STOK": {
+    "name": "Stoke Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1686070656.0
+   },
+   "STLN": {
+    "name": "Starling Oncology, Inc.",
+    "sector": "Healthcare",
+    "mcap": 685385856.0
+   },
+   "STAA": {
+    "name": "STAAR Surgical Company",
+    "sector": "Healthcare",
+    "mcap": 1122723712.0
+   },
+   "SRPT": {
+    "name": "Sarepta Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1916074112.0
+   },
+   "SPTX": {
+    "name": "Seaport Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1114506112.0
+   },
+   "SOPH": {
+    "name": "SOPHiA GENETICS SA",
+    "sector": "Healthcare",
+    "mcap": 600151168.0
+   },
+   "SNDX": {
+    "name": "Syndax Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1192562560.0
+   },
+   "SNDA": {
+    "name": "Sonida Senior Living, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1608646784.0
+   },
+   "SLN": {
+    "name": "Silence Therapeutics Plc - Amer",
+    "sector": "Healthcare",
+    "mcap": 1222260224.0
+   },
+   "SLDB": {
+    "name": "Solid Biosciences Inc.",
+    "sector": "Healthcare",
+    "mcap": 657826880.0
+   },
+   "SLBT": {
+    "name": "SL Science Holding Limited",
+    "sector": "Healthcare",
+    "mcap": 757081728.0
+   },
+   "SIBN": {
+    "name": "SI-BONE, Inc.",
+    "sector": "Healthcare",
+    "mcap": 960462080.0
+   },
+   "SGP": {
+    "name": "SpyGlass Pharma, Inc.",
+    "sector": "Healthcare",
+    "mcap": 936543424.0
+   },
+   "SGMT": {
+    "name": "Sagimet Biosciences Inc. - Seri",
+    "sector": "Healthcare",
+    "mcap": 687104896.0
+   },
+   "SEPN": {
+    "name": "Septerna, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1904886272.0
+   },
+   "SDGR": {
+    "name": "Schrodinger, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1665921408.0
+   },
+   "SANA": {
+    "name": "Sana Biotechnology, Inc.",
+    "sector": "Healthcare",
+    "mcap": 703497472.0
+   },
+   "RXRX": {
+    "name": "Recursion Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1884992896.0
+   },
+   "RIGL": {
+    "name": "Rigel Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 913071744.0
+   },
+   "REPL": {
+    "name": "Replimune Group, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1103783040.0
+   },
+   "RARE": {
+    "name": "Ultragenyx Pharmaceutical Inc.",
+    "sector": "Healthcare",
+    "mcap": 1568055936.0
+   },
+   "RAPP": {
+    "name": "Rapport Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1260389632.0
+   },
+   "QURE": {
+    "name": "uniQure N.V.",
+    "sector": "Healthcare",
+    "mcap": 1585716352.0
+   },
+   "QDEL": {
+    "name": "QuidelOrtho Corporation",
+    "sector": "Healthcare",
+    "mcap": 934683008.0
+   },
+   "PVLA": {
+    "name": "Palvella Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1800042240.0
+   },
+   "PSNL": {
+    "name": "Personalis, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1683165952.0
+   },
+   "PRME": {
+    "name": "Prime Medicine, Inc.",
+    "sector": "Healthcare",
+    "mcap": 663839360.0
+   },
+   "PRCT": {
+    "name": "PROCEPT BioRobotics Corporation",
+    "sector": "Healthcare",
+    "mcap": 1111625088.0
+   },
+   "PNTG": {
+    "name": "The Pennant Group, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1455843712.0
+   },
+   "PHR": {
+    "name": "Phreesia, Inc.",
+    "sector": "Healthcare",
+    "mcap": 768438272.0
+   },
+   "PHAT": {
+    "name": "Phathom Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 569542592.0
+   },
+   "PHAR": {
+    "name": "Pharming Group N.V.",
+    "sector": "Healthcare",
+    "mcap": 764403776.0
+   },
+   "PCRX": {
+    "name": "Pacira BioSciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1450410240.0
+   },
+   "PBYI": {
+    "name": "Puma Biotechnology Inc",
+    "sector": "Healthcare",
+    "mcap": 578919040.0
+   },
+   "PAHC": {
+    "name": "Phibro Animal Health Corporatio",
+    "sector": "Healthcare",
+    "mcap": 1637462784.0
+   },
+   "PACB": {
+    "name": "Pacific Biosciences of Californ",
+    "sector": "Healthcare",
+    "mcap": 658899072.0
+   },
+   "ORIC": {
+    "name": "Oric Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1389982080.0
+   },
+   "OPK": {
+    "name": "Opko Health, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1231441664.0
+   },
+   "OMER": {
+    "name": "Omeros Corporation",
+    "sector": "Healthcare",
+    "mcap": 1186806528.0
+   },
+   "OMDA": {
+    "name": "Omada Health, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1149649792.0
+   },
+   "OMCL": {
+    "name": "Omnicell, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1685448448.0
+   },
+   "OLMA": {
+    "name": "Olema Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 601108544.0
+   },
+   "ODTX": {
+    "name": "Odyssey Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 922483456.0
+   },
+   "OCUL": {
+    "name": "Ocular Therapeutix, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1434069760.0
+   },
+   "OBX": {
+    "name": "Obsidian Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 883969856.0
+   },
+   "OABI": {
+    "name": "OmniAb, Inc.",
+    "sector": "Healthcare",
+    "mcap": 701508672.0
+   },
+   "NVCT": {
+    "name": "Nuvectis Pharma, Inc.",
+    "sector": "Healthcare",
+    "mcap": 682260992.0
+   },
+   "NVCR": {
+    "name": "NovoCure Limited",
+    "sector": "Healthcare",
+    "mcap": 1749598720.0
+   },
+   "NVAX": {
+    "name": "Novavax, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1648632576.0
+   },
+   "NUVB": {
+    "name": "Nuvation Bio Inc.",
+    "sector": "Healthcare",
+    "mcap": 1641501184.0
+   },
+   "NUTX": {
+    "name": "Nutex Health Inc.",
+    "sector": "Healthcare",
+    "mcap": 1388768896.0
+   },
+   "NTLA": {
+    "name": "Intellia Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1567317120.0
+   },
+   "NKTR": {
+    "name": "Nektar Therapeutics",
+    "sector": "Healthcare",
+    "mcap": 1272157696.0
+   },
+   "NBTX": {
+    "name": "Nanobiotix S.A.",
+    "sector": "Healthcare",
+    "mcap": 1513833984.0
+   },
+   "MYGN": {
+    "name": "Myriad Genetics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 529899040.0
+   },
+   "MNKD": {
+    "name": "MannKind Corporation",
+    "sector": "Healthcare",
+    "mcap": 1006434240.0
+   },
+   "MLYS": {
+    "name": "Mineralys Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1837979264.0
+   },
+   "MLTX": {
+    "name": "MoonLake Immunotherapeutics",
+    "sector": "Healthcare",
+    "mcap": 1059578240.0
+   },
+   "MGTX": {
+    "name": "MeiraGTx Holdings plc",
+    "sector": "Healthcare",
+    "mcap": 931617024.0
+   },
+   "MESO": {
+    "name": "Mesoblast Limited",
+    "sector": "Healthcare",
+    "mcap": 1625783168.0
+   },
+   "MDXG": {
+    "name": "MiMedx Group, Inc",
+    "sector": "Healthcare",
+    "mcap": 572792128.0
+   },
+   "MAZE": {
+    "name": "Maze Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1774240512.0
+   },
+   "LXRX": {
+    "name": "Lexicon Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 680782592.0
+   },
+   "LTGO": {
+    "name": "Latigo Biotherapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1167863040.0
+   },
+   "LMRI": {
+    "name": "Lumexa Imaging Holdings, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1028963008.0
+   },
+   "LMAT": {
+    "name": "LeMaitre Vascular, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1945487616.0
+   },
+   "LBRX": {
+    "name": "LB Pharmaceuticals Inc",
+    "sector": "Healthcare",
+    "mcap": 1261333760.0
+   },
+   "KURA": {
+    "name": "Kura Oncology, Inc.",
+    "sector": "Healthcare",
+    "mcap": 867810816.0
+   },
+   "KRSA": {
+    "name": "Korsana Biosciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1537023104.0
+   },
+   "KMTS": {
+    "name": "Kestra Medical Technologies, Lt",
+    "sector": "Healthcare",
+    "mcap": 1668772608.0
+   },
+   "KLRA": {
+    "name": "Kailera Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1698980352.0
+   },
+   "KIDS": {
+    "name": "OrthoPediatrics Corp.",
+    "sector": "Healthcare",
+    "mcap": 640864768.0
+   },
+   "KARD": {
+    "name": "Kardigan, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1173471360.0
+   },
+   "JBIO": {
+    "name": "Jade Biosciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 947601088.0
+   },
+   "JANX": {
+    "name": "Janux Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1016704448.0
+   },
+   "IVA": {
+    "name": "Inventiva S.A. - American Depos",
+    "sector": "Healthcare",
+    "mcap": 838583296.0
+   },
+   "IRWD": {
+    "name": "Ironwood Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 584123264.0
+   },
+   "IRMD": {
+    "name": "iRadimed Corporation",
+    "sector": "Healthcare",
+    "mcap": 1135229056.0
+   },
+   "INVA": {
+    "name": "Innoviva, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1525824768.0
+   },
+   "INNV": {
+    "name": "InnovAge Holding Corp.",
+    "sector": "Healthcare",
+    "mcap": 1250577280.0
+   },
+   "INMD": {
+    "name": "InMode Ltd.",
+    "sector": "Healthcare",
+    "mcap": 806838336.0
+   },
+   "INBX": {
+    "name": "Inhibrx Biosciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1405977984.0
+   },
+   "IMTX": {
+    "name": "Immatics N.V.",
+    "sector": "Healthcare",
+    "mcap": 1144732544.0
+   },
+   "IMMX": {
+    "name": "Immix Biopharma, Inc.",
+    "sector": "Healthcare",
+    "mcap": 691410624.0
+   },
+   "IMCR": {
+    "name": "Immunocore Holdings plc",
+    "sector": "Healthcare",
+    "mcap": 1637655936.0
+   },
+   "IART": {
+    "name": "Integra LifeSciences Holdings C",
+    "sector": "Healthcare",
+    "mcap": 944935872.0
+   },
+   "IAM": {
+    "name": "Iambic Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 714329984.0
+   },
+   "HSTM": {
+    "name": "HealthStream, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1055405120.0
+   },
+   "HROW": {
+    "name": "Harrow, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1053408512.0
+   },
+   "HELP": {
+    "name": "Helus Pharma Inc.",
+    "sector": "Healthcare",
+    "mcap": 785396864.0
+   },
+   "HCSG": {
+    "name": "Healthcare Services Group, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1634132608.0
+   },
+   "GYRE": {
+    "name": "Gyre Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 620297472.0
+   },
+   "GPCR": {
+    "name": "Structure Therapeutics Inc.",
+    "sector": "Healthcare",
+    "mcap": 1560259584.0
+   },
+   "GMRS": {
+    "name": "GMR Solutions Inc.",
+    "sector": "Healthcare",
+    "mcap": 556423616.0
+   },
+   "GLUE": {
+    "name": "Monte Rosa Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 949538176.0
+   },
+   "GHRS": {
+    "name": "GH Research PLC",
+    "sector": "Healthcare",
+    "mcap": 1277432960.0
+   },
+   "GERN": {
+    "name": "Geron Corporation",
+    "sector": "Healthcare",
+    "mcap": 738844416.0
+   },
+   "GENB": {
+    "name": "Generate Biomedicines, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1626225280.0
+   },
+   "GDRX": {
+    "name": "GoodRx Holdings, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1228123264.0
+   },
+   "FTH": {
+    "name": "Faeth Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 535025984.0
+   },
+   "FRNM": {
+    "name": "Freenome, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1406478848.0
+   },
+   "FLGT": {
+    "name": "Fulgent Genetics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 535722720.0
+   },
+   "FDMT": {
+    "name": "4D Molecular Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 678951360.0
+   },
+   "EVO": {
+    "name": "Evotec SE",
+    "sector": "Healthcare",
+    "mcap": 547299200.0
+   },
+   "EVH": {
+    "name": "Evolent Health, Inc",
+    "sector": "Healthcare",
+    "mcap": 544380736.0
+   },
+   "ETRA": {
+    "name": "Electra Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 575886848.0
+   },
+   "ETON": {
+    "name": "Eton Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1411435264.0
+   },
+   "ESTA": {
+    "name": "Establishment Labs Holdings Inc",
+    "sector": "Healthcare",
+    "mcap": 1917155712.0
+   },
+   "EPRX": {
+    "name": "Eupraxia Pharmaceuticals Inc.",
+    "sector": "Healthcare",
+    "mcap": 505461312.0
+   },
+   "ENTX": {
+    "name": "Entera Bio Ltd.",
+    "sector": "Healthcare",
+    "mcap": 522372000.0
+   },
+   "ENOV": {
+    "name": "Enovis Corporation",
+    "sector": "Healthcare",
+    "mcap": 1216826368.0
+   },
+   "DSGN": {
+    "name": "Design Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 656481536.0
+   },
+   "DRUG": {
+    "name": "Bright Minds Biosciences Inc.",
+    "sector": "Healthcare",
+    "mcap": 510761056.0
+   },
+   "DRTS": {
+    "name": "Alpha Tau Medical Ltd.",
+    "sector": "Healthcare",
+    "mcap": 1202215936.0
+   },
+   "DNA": {
+    "name": "Ginkgo Bioworks Holdings, Inc.",
+    "sector": "Healthcare",
+    "mcap": 652864000.0
+   },
+   "DMRA": {
+    "name": "Damora Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1326387712.0
+   },
+   "DCTH": {
+    "name": "Delcath Systems, Inc.",
+    "sector": "Healthcare",
+    "mcap": 507296384.0
+   },
+   "DBVT": {
+    "name": "DBV Technologies S.A.",
+    "sector": "Healthcare",
+    "mcap": 604602496.0
+   },
+   "CTY": {
+    "name": "City Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1027281856.0
+   },
+   "CTMX": {
+    "name": "CytomX Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 524047776.0
+   },
+   "CTKB": {
+    "name": "Cytek Biosciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 699959872.0
+   },
+   "CSTL": {
+    "name": "Castle Biosciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1014243712.0
+   },
+   "CRVS": {
+    "name": "Corvus Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 859716096.0
+   },
+   "CRON": {
+    "name": "Cronos Group Inc. Common Share",
+    "sector": "Healthcare",
+    "mcap": 1267340288.0
+   },
+   "CRMD": {
+    "name": "CorMedix Inc.",
+    "sector": "Healthcare",
+    "mcap": 625503168.0
+   },
+   "COLL": {
+    "name": "Collegium Pharmaceutical, Inc.",
+    "sector": "Healthcare",
+    "mcap": 768475200.0
+   },
+   "COAG": {
+    "name": "Hemab Therapeutics Holdings, In",
+    "sector": "Healthcare",
+    "mcap": 1632588544.0
+   },
+   "CNMD": {
+    "name": "CONMED Corporation",
+    "sector": "Healthcare",
+    "mcap": 1454732160.0
+   },
+   "CMPS": {
+    "name": "COMPASS Pathways Plc - American",
+    "sector": "Healthcare",
+    "mcap": 1596637696.0
+   },
+   "CLYM": {
+    "name": "Climb Bio, Inc.",
+    "sector": "Healthcare",
+    "mcap": 601931968.0
+   },
+   "CGEM": {
+    "name": "Cullinan Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 908349952.0
+   },
+   "CERT": {
+    "name": "Certara, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1524625152.0
+   },
+   "CBLL": {
+    "name": "CeriBell, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1035057344.0
+   },
+   "CADL": {
+    "name": "Candel Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 642373440.0
+   },
+   "BVS": {
+    "name": "Bioventus Inc.",
+    "sector": "Healthcare",
+    "mcap": 999304256.0
+   },
+   "BRVE": {
+    "name": "Braveheart Bio, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1895320192.0
+   },
+   "BLSM": {
+    "name": "BlossomHill Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 518729696.0
+   },
+   "BFLY": {
+    "name": "Butterfly Network, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1782779392.0
+   },
+   "BCRX": {
+    "name": "BioCryst Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1980397056.0
+   },
+   "BCAX": {
+    "name": "Bicara Therapeutics Inc.",
+    "sector": "Healthcare",
+    "mcap": 1142144896.0
+   },
+   "BBNX": {
+    "name": "Beta Bionics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1020122880.0
+   },
+   "AZTA": {
+    "name": "Azenta, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1572940288.0
+   },
+   "AVR": {
+    "name": "Anteris Technologies Global Cor",
+    "sector": "Healthcare",
+    "mcap": 589623744.0
+   },
+   "AVLN": {
+    "name": "Avalyn Pharma Inc.",
+    "sector": "Healthcare",
+    "mcap": 1215613440.0
+   },
+   "AVBP": {
+    "name": "ArriVent BioPharma, Inc.",
+    "sector": "Healthcare",
+    "mcap": 930929856.0
+   },
+   "AURA": {
+    "name": "Aura Biosciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 662673728.0
+   },
+   "ATTO": {
+    "name": "Attovia Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 646878400.0
+   },
+   "ATEC": {
+    "name": "Alphatec Holdings, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1749158400.0
+   },
+   "ASTH": {
+    "name": "Astrana Health Inc.",
+    "sector": "Healthcare",
+    "mcap": 1849250816.0
+   },
+   "ARDX": {
+    "name": "Ardelyx, Inc.",
+    "sector": "Healthcare",
+    "mcap": 811018816.0
+   },
+   "ARDT": {
+    "name": "Ardent Health, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1715118208.0
+   },
+   "AQST": {
+    "name": "Aquestive Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 512715072.0
+   },
+   "APMD": {
+    "name": "Apnimed, Inc.",
+    "sector": "Healthcare",
+    "mcap": 777746176.0
+   },
+   "AORT": {
+    "name": "Artivion, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1155522432.0
+   },
+   "ANRO": {
+    "name": "Alto Neuroscience, Inc.",
+    "sector": "Healthcare",
+    "mcap": 891972992.0
+   },
+   "ANNX": {
+    "name": "Annexon, Inc.",
+    "sector": "Healthcare",
+    "mcap": 728931776.0
+   },
+   "ANL": {
+    "name": "Adlai Nortye Group Ltd.",
+    "sector": "Healthcare",
+    "mcap": 693243776.0
+   },
+   "ANIP": {
+    "name": "ANI Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1692685312.0
+   },
+   "ANGO": {
+    "name": "AngioDynamics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 500237664.0
+   },
+   "ANAB": {
+    "name": "AnaptysBio, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1417034624.0
+   },
+   "AMPH": {
+    "name": "Amphastar Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1108751488.0
+   },
+   "AMN": {
+    "name": "AMN Healthcare Services Inc",
+    "sector": "Healthcare",
+    "mcap": 1778481152.0
+   },
+   "ALVO": {
+    "name": "Alvotech",
+    "sector": "Healthcare",
+    "mcap": 1735914752.0
+   },
+   "ALMS": {
+    "name": "Alumis Inc.",
+    "sector": "Healthcare",
+    "mcap": 867216064.0
+   },
+   "ALHC": {
+    "name": "Alignment Healthcare, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1747641216.0
+   },
+   "AKTS": {
+    "name": "Aktis Oncology, Inc.",
+    "sector": "Healthcare",
+    "mcap": 915218880.0
+   },
+   "AHG": {
+    "name": "Akso Health Group",
+    "sector": "Healthcare",
+    "mcap": 1053746176.0
+   },
+   "AHCO": {
+    "name": "AdaptHealth Corp.",
+    "sector": "Healthcare",
+    "mcap": 807125440.0
+   },
+   "AGL": {
+    "name": "agilon health, inc.",
+    "sector": "Healthcare",
+    "mcap": 1481320576.0
+   },
+   "ADRX": {
+    "name": "ADARx Pharmaceuticals, Inc.",
+    "sector": "Healthcare",
+    "mcap": 1885844352.0
+   },
+   "ACRS": {
+    "name": "Aclaris Therapeutics, Inc.",
+    "sector": "Healthcare",
+    "mcap": 564507776.0
+   },
+   "ACHV": {
+    "name": "Achieve Life Sciences, Inc.",
+    "sector": "Healthcare",
+    "mcap": 669537216.0
+   },
+   "ABUS": {
+    "name": "Arbutus Biopharma Corporation",
+    "sector": "Healthcare",
+    "mcap": 643758784.0
+   },
+   "ABSI": {
+    "name": "Absci Corporation",
+    "sector": "Healthcare",
+    "mcap": 1564261760.0
+   },
+   "AAPG": {
+    "name": "Ascentage Pharma Group Internat",
+    "sector": "Healthcare",
+    "mcap": 1410173056.0
+   }
+  },
+  "Consumer Defensive": {
+   "YSWY": {
+    "name": "Yesway, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 757185408.0
+   },
+   "WEST": {
+    "name": "Westrock Coffee Company",
+    "sector": "Consumer Defensive",
+    "mcap": 918673664.0
+   },
+   "VLGEA": {
+    "name": "Village Super Market, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 667765376.0
+   },
+   "UVV": {
+    "name": "Universal Corporation",
+    "sector": "Consumer Defensive",
+    "mcap": 971880256.0
+   },
+   "UTI": {
+    "name": "Universal Technical Institute I",
+    "sector": "Consumer Defensive",
+    "mcap": 1167275136.0
+   },
+   "TPB": {
+    "name": "Turning Point Brands, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 1325634816.0
+   },
+   "STRA": {
+    "name": "Strategic Education, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 1785709952.0
+   },
+   "SPB": {
+    "name": "Spectrum Brands Holdings, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 1847351168.0
+   },
+   "SMPL": {
+    "name": "The Simply Good Foods Company",
+    "sector": "Consumer Defensive",
+    "mcap": 974622144.0
+   },
+   "SENEB": {
+    "name": "Seneca Foods Corp.",
+    "sector": "Consumer Defensive",
+    "mcap": 1213381632.0
+   },
+   "SENEA": {
+    "name": "Seneca Foods Corp.",
+    "sector": "Consumer Defensive",
+    "mcap": 1138655360.0
+   },
+   "SAM": {
+    "name": "Boston Beer Company, Inc. (The)",
+    "sector": "Consumer Defensive",
+    "mcap": 1980119424.0
+   },
+   "PXED": {
+    "name": "Phoenix Education Partners, Inc",
+    "sector": "Consumer Defensive",
+    "mcap": 871986048.0
+   },
+   "OFRM": {
+    "name": "Once Upon a Farm, PBC",
+    "sector": "Consumer Defensive",
+    "mcap": 705442944.0
+   },
+   "ODD": {
+    "name": "ODDITY Tech Ltd.",
+    "sector": "Consumer Defensive",
+    "mcap": 1039647424.0
+   },
+   "NOMD": {
+    "name": "Nomad Foods Limited",
+    "sector": "Consumer Defensive",
+    "mcap": 1699860608.0
+   },
+   "NGVC": {
+    "name": "Natural Grocers by Vitamin Cott",
+    "sector": "Consumer Defensive",
+    "mcap": 727096640.0
+   },
+   "MAMA": {
+    "name": "Mama's Creations, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 630361664.0
+   },
+   "LINC": {
+    "name": "Lincoln Educational Services Co",
+    "sector": "Consumer Defensive",
+    "mcap": 687404480.0
+   },
+   "JJSF": {
+    "name": "J & J Snack Foods Corp.",
+    "sector": "Consumer Defensive",
+    "mcap": 1574532608.0
+   },
+   "JBSS": {
+    "name": "John B. Sanfilippo & Son, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 791239424.0
+   },
+   "IMKTA": {
+    "name": "Ingles Markets, Incorporated",
+    "sector": "Consumer Defensive",
+    "mcap": 1661628032.0
+   },
+   "HNST": {
+    "name": "The Honest Company, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 516016416.0
+   },
+   "HLF": {
+    "name": "Herbalife Ltd.",
+    "sector": "Consumer Defensive",
+    "mcap": 1432711296.0
+   },
+   "HELE": {
+    "name": "Helen of Troy Limited",
+    "sector": "Consumer Defensive",
+    "mcap": 666867008.0
+   },
+   "GOTU": {
+    "name": "Gaotu Techedu Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 591165440.0
+   },
+   "GO": {
+    "name": "Grocery Outlet Holding Corp.",
+    "sector": "Consumer Defensive",
+    "mcap": 1345072000.0
+   },
+   "FLO": {
+    "name": "Flowers Foods, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 1345504256.0
+   },
+   "EPC": {
+    "name": "Edgewell Personal Care Company",
+    "sector": "Consumer Defensive",
+    "mcap": 1302011904.0
+   },
+   "DOLE": {
+    "name": "Dole plc",
+    "sector": "Consumer Defensive",
+    "mcap": 1271415552.0
+   },
+   "DNUT": {
+    "name": "Krispy Kreme, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 510090016.0
+   },
+   "DMC": {
+    "name": "Del Monte Corporation",
+    "sector": "Consumer Defensive",
+    "mcap": 1392463488.0
+   },
+   "COUR": {
+    "name": "Coursera, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 1446111104.0
+   },
+   "BRBR": {
+    "name": "BellRing Brands, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 1134875136.0
+   },
+   "AVO": {
+    "name": "Mission Produce, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 1036358656.0
+   },
+   "APEI": {
+    "name": "American Public Education, Inc.",
+    "sector": "Consumer Defensive",
+    "mcap": 885337216.0
+   },
+   "AIIR": {
+    "name": "Air Global PLC",
+    "sector": "Consumer Defensive",
+    "mcap": 1218238720.0
+   },
+   "AGRO": {
+    "name": "Adecoagro S.A.",
+    "sector": "Consumer Defensive",
+    "mcap": 1392571776.0
+   },
+   "AGCC": {
+    "name": "Agencia Comercial Spirits Ltd",
+    "sector": "Consumer Defensive",
+    "mcap": 658484224.0
+   },
+   "AFYA": {
+    "name": "Afya Limited",
+    "sector": "Consumer Defensive",
+    "mcap": 1329827584.0
+   }
+  },
+  "Consumer Cyclical": {
+   "XPEL": {
+    "name": "XPEL, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1215732224.0
+   },
+   "XMAX": {
+    "name": "XMAX, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 569932352.0
+   },
+   "WWW": {
+    "name": "Wolverine World Wide, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1688104448.0
+   },
+   "WOOF": {
+    "name": "Petco Health and Wellness Compa",
+    "sector": "Consumer Cyclical",
+    "mcap": 708887872.0
+   },
+   "WINA": {
+    "name": "Winmark Corporation",
+    "sector": "Consumer Cyclical",
+    "mcap": 1034849984.0
+   },
+   "WHR": {
+    "name": "Whirlpool Corporation",
+    "sector": "Consumer Cyclical",
+    "mcap": 1832102528.0
+   },
+   "WGO": {
+    "name": "Winnebago Industries, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 793083776.0
+   },
+   "WEN": {
+    "name": "Wendy's Company (The)",
+    "sector": "Consumer Cyclical",
+    "mcap": 1240098176.0
+   },
+   "TRS": {
+    "name": "TriMas Corporation",
+    "sector": "Consumer Cyclical",
+    "mcap": 1438362880.0
+   },
+   "TRON": {
+    "name": "Tron Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 704457408.0
+   },
+   "TRIP": {
+    "name": "TripAdvisor, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1114158208.0
+   },
+   "THRM": {
+    "name": "Gentherm Inc",
+    "sector": "Consumer Cyclical",
+    "mcap": 1427789184.0
+   },
+   "SVV": {
+    "name": "Savers Value Village, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1506295680.0
+   },
+   "SMP": {
+    "name": "Standard Motor Products, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 843122688.0
+   },
+   "SG": {
+    "name": "Sweetgreen, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1190413056.0
+   },
+   "SBH": {
+    "name": "Sally Beauty Holdings, Inc. (Na",
+    "sector": "Consumer Cyclical",
+    "mcap": 1615920768.0
+   },
+   "SAH": {
+    "name": "Sonic Automotive, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1989045248.0
+   },
+   "RVLV": {
+    "name": "Revolve Group, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1594446080.0
+   },
+   "RERE": {
+    "name": "ATRenew Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 839450368.0
+   },
+   "REF": {
+    "name": "Reformation Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 874669376.0
+   },
+   "REAL": {
+    "name": "The RealReal, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1268421376.0
+   },
+   "PZZA": {
+    "name": "Papa John's International, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 614647936.0
+   },
+   "PSNYW": {
+    "name": "Polestar Automotive Holding UK ",
+    "sector": "Consumer Cyclical",
+    "mcap": 548761344.0
+   },
+   "PSNY": {
+    "name": "Polestar Automotive Holding UK ",
+    "sector": "Consumer Cyclical",
+    "mcap": 596336896.0
+   },
+   "PRSU": {
+    "name": "Pursuit Attractions and Hospita",
+    "sector": "Consumer Cyclical",
+    "mcap": 1555000832.0
+   },
+   "PRKS": {
+    "name": "United Parks & Resorts Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1387444096.0
+   },
+   "PLOW": {
+    "name": "Douglas Dynamics, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 913735680.0
+   },
+   "OI": {
+    "name": "O-I Glass, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 979580864.0
+   },
+   "MYE": {
+    "name": "Myers Industries, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1233120384.0
+   },
+   "MOV": {
+    "name": "Movado Group Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 712095296.0
+   },
+   "MLR": {
+    "name": "Miller Industries, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 594173312.0
+   },
+   "MLKN": {
+    "name": "MillerKnoll, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1445139584.0
+   },
+   "MLCO": {
+    "name": "Melco Resorts & Entertainment L",
+    "sector": "Consumer Cyclical",
+    "mcap": 1511470080.0
+   },
+   "MBC": {
+    "name": "MasterBrand, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1470218752.0
+   },
+   "LZB": {
+    "name": "La-Z-Boy Incorporated",
+    "sector": "Consumer Cyclical",
+    "mcap": 1199580544.0
+   },
+   "LUXE": {
+    "name": "LuxExperience B.V.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1349500288.0
+   },
+   "LUCK": {
+    "name": "LUCKY STRIKE ENTERTAINMENT CORP",
+    "sector": "Consumer Cyclical",
+    "mcap": 631880384.0
+   },
+   "LQDT": {
+    "name": "Liquidity Services, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1383760896.0
+   },
+   "LGIH": {
+    "name": "LGI Homes, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 992003712.0
+   },
+   "LEGH": {
+    "name": "Legacy Housing Corporation",
+    "sector": "Consumer Cyclical",
+    "mcap": 679957056.0
+   },
+   "LCID": {
+    "name": "Lucid Group, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1365453184.0
+   },
+   "KRT": {
+    "name": "Karat Packaging Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1078704640.0
+   },
+   "JMIA": {
+    "name": "Jumia Technologies AG",
+    "sector": "Consumer Cyclical",
+    "mcap": 797078144.0
+   },
+   "HZO": {
+    "name": "MarineMax, Inc.  (FL)",
+    "sector": "Consumer Cyclical",
+    "mcap": 1162204032.0
+   },
+   "HYLN": {
+    "name": "Hyliion Holdings Corp.",
+    "sector": "Consumer Cyclical",
+    "mcap": 551865408.0
+   },
+   "HOV": {
+    "name": "Hovnanian Enterprises, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 599147712.0
+   },
+   "HEPS": {
+    "name": "D-Market Electronic Services & ",
+    "sector": "Consumer Cyclical",
+    "mcap": 1176654336.0
+   },
+   "HDL": {
+    "name": "SUPER HI INTERNATIONAL HOLDING ",
+    "sector": "Consumer Cyclical",
+    "mcap": 602327936.0
+   },
+   "GT": {
+    "name": "The Goodyear Tire & Rubber Comp",
+    "sector": "Consumer Cyclical",
+    "mcap": 1266754560.0
+   },
+   "GOOS": {
+    "name": "Canada Goose Holdings Inc. Subo",
+    "sector": "Consumer Cyclical",
+    "mcap": 812047936.0
+   },
+   "GIII": {
+    "name": "G-III Apparel Group, LTD.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1253280256.0
+   },
+   "FWRG": {
+    "name": "First Watch Restaurant Group, I",
+    "sector": "Consumer Cyclical",
+    "mcap": 703521728.0
+   },
+   "FUN": {
+    "name": "Six Flags Entertainment Corpora",
+    "sector": "Consumer Cyclical",
+    "mcap": 737700608.0
+   },
+   "FOXF": {
+    "name": "Fox Factory Holding Corp.",
+    "sector": "Consumer Cyclical",
+    "mcap": 630465024.0
+   },
+   "EYE": {
+    "name": "National Vision Holdings, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1454084608.0
+   },
+   "ETD": {
+    "name": "Ethan Allen Interiors Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 516186432.0
+   },
+   "DRVN": {
+    "name": "Driven Brands Holdings Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1947586688.0
+   },
+   "DFH": {
+    "name": "Dream Finders Homes, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 907161920.0
+   },
+   "DCH": {
+    "name": "Dauch Corporation",
+    "sector": "Consumer Cyclical",
+    "mcap": 1122681728.0
+   },
+   "CSV": {
+    "name": "Carriage Services, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 587962624.0
+   },
+   "CRI": {
+    "name": "Carter's, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1234964224.0
+   },
+   "CPRI": {
+    "name": "Capri Holdings Limited",
+    "sector": "Consumer Cyclical",
+    "mcap": 1841903488.0
+   },
+   "CNNE": {
+    "name": "Cannae Holdings, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 712204800.0
+   },
+   "CBRL": {
+    "name": "Cracker Barrel Old Country Stor",
+    "sector": "Consumer Cyclical",
+    "mcap": 1477495552.0
+   },
+   "BZH": {
+    "name": "Beazer Homes USA, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 893233792.0
+   },
+   "BXBL": {
+    "name": "BOXABL, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 724665728.0
+   },
+   "BWMX": {
+    "name": "Betterware de Mexico, S.A.P.I. ",
+    "sector": "Consumer Cyclical",
+    "mcap": 621968512.0
+   },
+   "BRSL": {
+    "name": "Brightstar Lottery PLC Trading ",
+    "sector": "Consumer Cyclical",
+    "mcap": 1739688960.0
+   },
+   "BLMN": {
+    "name": "Bloomin' Brands, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 852356224.0
+   },
+   "BJRI": {
+    "name": "BJ's Restaurants, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1218561152.0
+   },
+   "BH-A": {
+    "name": "Biglari Holdings Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1244066048.0
+   },
+   "BH": {
+    "name": "Biglari Holdings Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1279714304.0
+   },
+   "BALY": {
+    "name": "Bally's Corporation",
+    "sector": "Consumer Cyclical",
+    "mcap": 697488768.0
+   },
+   "ARHS": {
+    "name": "Arhaus, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1602233472.0
+   },
+   "ARCO": {
+    "name": "Arcos Dorados Holdings Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1670515968.0
+   },
+   "ANDG": {
+    "name": "Andersen Group Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1158034048.0
+   },
+   "AIN": {
+    "name": "Albany International Corporatio",
+    "sector": "Consumer Cyclical",
+    "mcap": 1827243776.0
+   },
+   "ADNT": {
+    "name": "Adient plc",
+    "sector": "Consumer Cyclical",
+    "mcap": 1356159488.0
+   },
+   "ACVA": {
+    "name": "ACV Auctions Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 1783154304.0
+   },
+   "ACEL": {
+    "name": "Accel Entertainment, Inc.",
+    "sector": "Consumer Cyclical",
+    "mcap": 893940160.0
+   }
+  }
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "alerted": {
+  "QMCO|2026-09-24": "13:11",
+  "QMCO|2026-09-25": "15:36",
+  "KRSA|2026-09-29": "15:09",
+  "PACB|2026-09-30": "11:11",
+  "SGMT|2026-09-30": "12:12",
+  "KRSA|2026-09-30": "13:13",
+  "DNA|2026-09-30": "15:36"
+ },
+ "history": [
+  {
+   "symbol": "DNA",
+   "date": "2026-09-30",
+   "time": "15:36",
+   "price": 13.38,
+   "score": 45,
+   "rvol": 2.54,
+   "status": "faded"
+  },
+  {
+   "symbol": "KRSA",
+   "date": "2026-09-30",
+   "time": "13:13",
+   "price": 32.5,
+   "score": 53,
+   "rvol": 2.34,
+   "status": "held"
+  },
+  {
+   "symbol": "SGMT",
+   "date": "2026-09-30",
+   "time": "12:12",
+   "price": 9.83,
+   "score": 36,
+   "rvol": 2.21,
+   "status": "held"
+  },
+  {
+   "symbol": "PACB",
+   "date": "2026-09-30",
+   "time": "11:11",
+   "price": 2.3045,
+   "score": 47,
+   "rvol": 3.15,
+   "status": "held"
+  },
+  {
+   "symbol": "KRSA",
+   "date": "2026-09-29",
+   "time": "15:09",
+   "price": 36.77,
+   "score": 54,
+   "rvol": 2.04,
+   "status": "held"
+  },
+  {
+   "symbol": "QMCO",
+   "date": "2026-09-25",
+   "time": "15:36",
+   "price": 31.68,
+   "score": 58,
+   "rvol": 2.01,
+   "status": "held"
+  },
+  {
+   "symbol": "QMCO",
+   "date": "2026-09-24",
+   "time": "13:11",
+   "price": 29.65,
+   "score": 45,
+   "rvol": 2.0,
+   "status": "held"
+  }
+ ]
+}

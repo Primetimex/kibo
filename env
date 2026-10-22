@@ -1,0 +1,26 @@
+# ── KIBO Trading Agent — Environment Variables ───────────────────────────────
+# NEVER share this file or commit it to GitHub
+
+# ── Polygon.io (market data) ─────────────────────────────────────────────────
+POLYGON_API_KEY=yUCzVXAU1vTGyKUKg1ljdXh27ODpCN0p
+
+# ── TradeZero Developer API ──────────────────────────────────────────────────
+TZ_API_KEY_ID=a57de38a-3e52-4f1b-b718-64cd1098f4fd
+TZ_API_SECRET_KEY=9EE98FEA7A4E3ABA09CD68612C703E205AFDD767D4A99A47E614818F069F9FBE
+TZ_ACCOUNT_ID=TZP098F0
+
+# ── Account Settings ─────────────────────────────────────────────────────────
+ACCOUNT_SIZE=1000000
+PAPER_MODE=true
+
+# ── Telegram Alerts ──────────────────────────────────────────────────────────
+TELEGRAM_BOT_TOKEN=8800696969:AAGTrZhZxlg65YQFdLPwrStcL0yXXatupao
+TELEGRAM_CHAT_ID=-5292445882
+
+# ── Alpaca Paper Trading (Futures, ORB, Crypto agents) ───────────────────────
+ALPACA_API_KEY=PK44JD6XRZUANPBYL2CM4BR6VN
+ALPACA_API_SECRET=GHqEV5C4RWViGiNzYuAYnbDD2mNiABnA4TC5owNbcCcz
+ALPACA_BASE_URL=https://paper-api.alpaca.markets
+
+# ── OpenAI (Trading Intelligence Agent) ──────────────────────────────────────
+OPENAI_API_KEY=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

@@ -1,0 +1,30 @@
+# ── KIBO Trading Agent — Environment Variables ───────────────────────────────
+# 1. Copy this file:   cp .env.example .env
+# 2. Fill in your real values below
+# 3. NEVER share your .env or commit it to GitHub
+
+# ── Polygon.io (market data) ─────────────────────────────────────────────────
+# Free account = 15-min delayed data (fine for testing)
+# Paid Starter ($29/mo) = real-time data (recommended for live trading)
+# Get yours at: https://polygon.io/dashboard/signup
+POLYGON_API_KEY=yUCzVXAU1vTGyKUKg1ljdXh27ODpCN0p
+
+# ── TradeZero Developer API ──────────────────────────────────────────────────
+# Apply at: https://developer.tradezero.com
+TZ_API_KEY=a57de38a-3e52-4f1b-b718-64cd1098f4fd
+
+# ── Account Settings ─────────────────────────────────────────────────────────
+# Your actual TradeZero account balance in USD
+ACCOUNT_SIZE=1000000
+
+# ALWAYS start with true. Only change to false after weeks of paper testing.
+PAPER_MODE=true
+
+# ── Telegram Alerts ───────────────────────────────────────────────────────────
+# Step-by-step setup is in README.md Section 4
+# Your bot token from @BotFather (looks like: 123456789:ABCdef...)
+TELEGRAM_BOT_TOKEN=8800696969:AAGTrZhZxlg65YQFdLPwrStcL0yXXatupao
+
+# Your personal Telegram chat ID (a number like 987654321)
+# Get it by messaging @userinfobot on Telegram
+TELEGRAM_CHAT_ID=8597222355

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Volume Spikes · KIBO</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0f;--s:#111118;--s2:#16161f;--b:#1e1e2e;--b2:#2a2a3e;
+  --gold:#d4af37;--g2:#f0c84a;--green:#00e676;--red:#ff4444;--blue:#4fc3f7;--amber:#ffb74d;
+  --muted:#5a5a7a;--sub:#8888aa;--text:#e8e8f0;
+  --mono:'Space Mono',ui-monospace,Consolas,monospace;
+  --sans:'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.45;min-height:100vh}
+a{color:inherit}
+button{font-family:var(--sans);cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.up{color:var(--green)}.down{color:var(--red)}.dim{color:var(--sub)}
+
+/* ── top bar ─────────────────────────────────────────── */
+.bar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 22px;border-bottom:1px solid var(--b);background:var(--s);position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:11px;margin-right:auto}
+.k{width:34px;height:34px;border-radius:9px;background:var(--gold);color:#0a0a0f;font-weight:700;font-size:18px;display:grid;place-items:center}
+.brand h1{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.brand a{font-size:12px;color:var(--sub);text-decoration:none}
+.brand a:hover{color:var(--gold)}
+.status{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--sub)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--muted);margin-right:6px;vertical-align:1px}
+.dot.on{background:var(--green);box-shadow:0 0 0 3px rgba(0,230,118,.15)}
+.dot.busy{background:var(--gold);animation:blink 1s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.btn{border:1px solid var(--b2);background:var(--s2);color:var(--text);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:600}
+.btn:hover{border-color:var(--gold)}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:#0a0a0f}
+.btn.primary:hover{background:var(--g2)}
+.btn:disabled{opacity:.5;cursor:default}
+.toast{font-size:12px;color:var(--gold);min-height:1em}
+
+#errors:empty,#partial:empty{display:none}
+main{max-width:1320px;margin:0 auto;padding:22px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.banner{border:1px solid rgba(255,68,68,.4);background:rgba(255,68,68,.07);border-radius:10px;padding:12px 16px;font-size:13px}
+.banner b{color:var(--red)}
+.banner ul{margin:6px 0 0 18px;color:var(--sub)}
+.note{border:1px solid rgba(255,183,77,.35);background:rgba(255,183,77,.06);color:var(--amber);border-radius:10px;padding:10px 16px;font-size:13px}
+
+section h2{font-size:15px;font-weight:600;margin-bottom:12px;display:flex;align-items:baseline;gap:4px 10px;flex-wrap:wrap}
+section h2 .count{font-family:var(--mono);font-size:12px;color:var(--sub);font-weight:400}
+section h2 small{font-size:12px;color:var(--sub);font-weight:400}
+.panel{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:18px}
+
+/* ── rules funnel (the centrepiece) ──────────────────── */
+.top{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px}
+.funnel{display:grid;gap:3px}
+.step{display:grid;grid-template-columns:22px minmax(0,1fr) 64px;align-items:center;gap:12px;padding:7px 0}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right}
+.step .lab{font-size:13px;margin-bottom:5px;display:flex;justify-content:space-between;gap:8px}
+.step .lab .drop{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+.track{height:10px;background:var(--s2);border-radius:3px;overflow:hidden}
+.fill{height:100%;background:linear-gradient(90deg,rgba(212,175,55,.55),var(--gold));border-radius:3px;transition:width .6s ease}
+.step.final .fill{background:var(--green)}
+.step .cnt{font-family:var(--mono);font-size:15px;font-weight:700;text-align:right}
+.step.zero .cnt{color:var(--muted)}
+.step.final .cnt{color:var(--green)}
+.funnel-head{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);margin-bottom:8px}
+
+.sectors{width:100%;border-collapse:collapse;font-size:13px}
+.sectors td{padding:6px 4px;border-bottom:1px solid var(--b)}
+.sectors tr:last-child td{border-bottom:0}
+.sectors .rk{font-family:var(--mono);color:var(--muted);width:24px}
+.sectors .etf{font-family:var(--mono);font-size:11px;color:var(--sub)}
+.sectors tr.strong td:nth-child(2){color:var(--gold);font-weight:600}
+.pill{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;border:1px solid var(--b2);color:var(--sub);white-space:nowrap}
+.pill.gold{border-color:rgba(212,175,55,.5);color:var(--gold)}
+.pill.green{border-color:rgba(0,230,118,.45);color:var(--green)}
+.pill.red{border-color:rgba(255,68,68,.45);color:var(--red)}
+.pill.amber{border-color:rgba(255,183,77,.45);color:var(--amber)}
+
+/* ── alert cards ──────────────────────────────────── */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(360px,100%),1fr));gap:16px}
+.card{background:var(--s);border:1px solid var(--b);border-left:3px solid var(--green);border-radius:12px;padding:16px;display:grid;gap:12px}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.sym{font-size:22px;font-weight:700;letter-spacing:-.01em}
+.sym a{text-decoration:none}.sym a:hover{color:var(--gold)}
+.cname{font-size:12px;color:var(--sub);max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.px{text-align:right}
+.px .p{font-family:var(--mono);font-size:18px;font-weight:700}
+.px .c{font-family:var(--mono);font-size:12px}
+.chart{width:100%;height:auto;display:block}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.fact{background:var(--s2);border-radius:8px;padding:7px 9px}
+.fact .v{font-family:var(--mono);font-size:14px;font-weight:700}
+.fact .l{font-size:11px;color:var(--sub)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--sub)}
+.score{font-family:var(--mono);color:var(--gold);font-weight:700}
+
+/* ── tables ─────────────────────────────────────────── */
+.tw{overflow-x:auto;background:var(--s);border:1px solid var(--b);border-radius:12px}
+table.t{width:100%;border-collapse:collapse;font-size:13px;min-width:720px}
+table.t th{text-align:left;font-weight:500;font-size:12px;color:var(--sub);padding:10px 12px;border-bottom:1px solid var(--b);white-space:nowrap}
+table.t td{padding:9px 12px;border-bottom:1px solid var(--b);white-space:nowrap}
+table.t tr:last-child td{border-bottom:0}
+table.t td.r,table.t th.r{text-align:right}
+table.t .s{font-weight:700}
+table.t a{text-decoration:none}table.t a:hover{color:var(--gold)}
+
+.empty{padding:26px;text-align:center;color:var(--sub);font-size:13px;background:var(--s);border:1px dashed var(--b2);border-radius:12px}
+details.log{background:var(--s);border:1px solid var(--b);border-radius:12px}
+details.log summary{padding:12px 16px;cursor:pointer;font-size:13px;color:var(--sub)}
+details.log pre{padding:0 16px 16px;font-family:var(--mono);font-size:11px;line-height:1.6;color:var(--sub);white-space:pre-wrap;word-break:break-word;max-height:360px;overflow:auto}
+
+/* ── embedded inside the KIBO dashboard tab ─────────── */
+body.embed{min-height:0;background:transparent}
+body.embed .brand{display:none}
+body.embed .bar{position:static;background:transparent;border:0;padding:4px 0 0}
+body.embed main{padding:14px 0 4px}
+@media (max-width:900px){.top{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){
+  .bar{padding:12px 14px}main{padding:14px;gap:18px}
+  .cards{grid-template-columns:1fr}.facts{grid-template-columns:repeat(2,1fr)}
+  .step{grid-template-columns:16px minmax(0,1fr) 48px;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="brand">
+    <div class="k" aria-hidden="true">K</div>
+    <div><h1>Volume spike scanner</h1><a href="/">Back to KIBO dashboard</a></div>
+  </div>
+  <div class="status">
+    <span id="st-run"><span class="dot"></span>Checking…</span>
+    <span id="st-scan"></span>
+    <span id="st-mkt"></span>
+  </div>
+  <button class="btn primary" id="btn-scan">Scan now</button>
+  <button class="btn" id="btn-toggle">Start scanner</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<main>
+  <div id="errors"></div>
+  <div id="partial"></div>
+
+  <div class="top">
+    <section>
+      <h2>Your rules <small>how many stocks survived each one, in order</small></h2>
+      <div class="panel">
+        <div class="funnel-head"><span id="fn-scope">No scan yet</span><span>passed</span></div>
+        <div class="funnel" id="funnel"></div>
+      </div>
+    </section>
+    <section>
+      <h2>Sector strength <small id="sec-sub">top 4 by 3-month return and above the 50-day average</small></h2>
+      <div class="panel"><table class="sectors" id="sectors"></table></div>
+    </section>
+  </div>
+
+  <section>
+    <h2>Alerts today <span class="count" id="n-sp">0</span><small>every rule passed · sent to Telegram</small></h2>
+    <div id="spikes"></div>
+  </section>
+
+  <section>
+    <h2>Watch list <span class="count" id="n-wa">0</span><small>rules 1–4 pass, volume not at the spike level yet</small></h2>
+    <div id="watch"></div>
+  </section>
+
+  <section>
+    <h2>Alert history <span class="count" id="n-hi">0</span><small>intraday alerts are marked held or faded after the 4:10 PM close scan</small></h2>
+    <div id="history"></div>
+  </section>
+
+  <details class="log"><summary>Scanner log (last 25 lines)</summary><pre id="log">—</pre></details>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money = x => x == null ? '—' : x >= 1e9 ? '$' + (x/1e9).toFixed(2) + 'B' : '$' + (x/1e6).toFixed(0) + 'M';
+const px = x => x == null ? '—' : '$' + (x < 10 ? x.toFixed(3) : x.toFixed(2));
+const pct = (x, d=1) => x == null ? '—' : (x > 0 ? '+' : '') + x.toFixed(d) + '%';
+const vol = x => x >= 1e6 ? (x/1e6).toFixed(1) + 'M' : (x/1e3).toFixed(0) + 'K';
+const cls = x => x > 0 ? 'up' : x < 0 ? 'down' : '';
+const tv = s => 'https://www.tradingview.com/chart/?symbol=' + encodeURIComponent(s);
+let DATA = null, pollTimer = null;
+
+/* When shown inside the KIBO dashboard tab, drop our own header and tell the
+   parent page how tall we are so the frame never needs its own scrollbar. */
+const EMBED = new URLSearchParams(location.search).has('embed') && window.parent !== window;
+if (EMBED){
+  document.body.classList.add('embed');
+  const post = () => window.parent.postMessage({type:'kibo-spikes-height', h: Math.ceil(document.body.getBoundingClientRect().height) + 8}, '*');
+  new ResizeObserver(post).observe(document.body);
+  window.addEventListener('load', post);
+}
+
+/* ── chart: close line and volume bars ───────────────── */
+function chart(sp, W=560, H=220, compact=false){
+  if (!sp || !sp.c || sp.c.length < 3) return '';
+  const n = sp.c.length, padL = 4, padR = compact ? 4 : 46, top = 8;
+  const vH = compact ? 0 : Math.round(H * .24), gap = compact ? 0 : 10;
+  const pH = H - top - vH - gap - (compact ? 4 : 0);
+  const lo = Math.min(...sp.c) * .985, hi = Math.max(...sp.c) * 1.015;
+  const x = i => padL + (i + .5) * (W - padL - padR) / n;
+  const y = v => top + (hi - v) / (hi - lo) * pH;
+  const bw = Math.max((W - padL - padR) / n * .7, 1);
+  let s = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Price and volume, last 100 days">`;
+  // price line
+  const pts = sp.c.map((v,i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  s += `<polyline points="${pts}" fill="none" stroke="#d4af37" stroke-width="${compact?1.4:1.8}" stroke-linejoin="round"/>`;
+  s += `<circle cx="${x(n-1)}" cy="${y(sp.c[n-1])}" r="${compact?2.5:3.5}" fill="#00e676"/>`;
+  if (!compact){
+    s += `<text x="${W-padR+4}" y="${y(sp.c[n-1])+4}" fill="#00e676" font-size="11" font-family="Space Mono,monospace">${sp.c[n-1].toFixed(2)}</text>`;
+    // volume
+    const vmax = Math.max(...sp.v, sp.avgv * 2.2, 1), vb = H - 2, vy = v => vb - v / vmax * vH;
+    sp.v.forEach((v,i) => {
+      const last = i === n-1;
+      const col = last ? '#00e676' : 'rgba(136,136,170,.35)';
+      s += `<rect x="${x(i)-bw/2}" y="${vy(v)}" width="${bw}" height="${vb-vy(v)}" fill="${col}"/>`;
+    });
+    if (sp.avgv) s += `<line x1="${padL}" x2="${W-padR}" y1="${vy(sp.avgv)}" y2="${vy(sp.avgv)}" stroke="rgba(232,232,240,.35)" stroke-dasharray="2 3"/>` +
+      `<text x="${W-padR+4}" y="${vy(sp.avgv)+4}" fill="#8888aa" font-size="10" font-family="Space Mono,monospace">avg</text>`;
+  }
+  return s + '</svg>';
+}
+
+/* ── sections ──────────────────────────────────────────────────────── */
+function renderStatus(d){
+  const running = !!d.running;
+  const busy = !!d.scanning;
+  $('st-run').innerHTML = `<span class="dot ${busy ? 'busy' : running ? 'on' : ''}"></span>` +
+    (busy ? 'Scanning…' : running ? 'Scanner running' : 'Scanner stopped');
+  $('st-scan').textContent = d.updated_et ? `Last scan ${d.updated_et}` + (d.scan_seconds ? ` (${d.scan_seconds}s)` : '') : 'No scan yet';
+  const m = {open:'Market open', premarket:'Pre-market', afterhours:'After hours', closed:'Market closed'}[d.market_state];
+  $('st-mkt').textContent = m ? m + (d.dry_run ? ' · dry run, no Telegram' : '') : '';
+  $('btn-toggle').textContent = running ? 'Stop scanner' : 'Start scanner';
+  $('btn-scan').disabled = busy;
+  $('errors').innerHTML = (d.errors && d.errors.length)
+    ? `<div class="banner"><b>Last scan reported problems.</b> Check the scanner log below.<ul>${d.errors.map(e=>`<li>${esc(e)}</li>`).join('')}</ul></div>` : '';
+  $('partial').innerHTML = d.partial_bar
+    ? `<div class="note">Today's candle is still forming. Volume shown is volume so far, so an alert here means the 2× spike has already happened. More stocks tend to qualify as the day goes on.</div>` : '';
+}
+
+function renderFunnel(d){
+  const f = d.funnel || [];
+  if (!f.length){
+    $('fn-scope').textContent = 'No scan yet';
+    $('funnel').innerHTML = `<div class="dim" style="padding:12px 0">Start the scanner to run the first scan. Counts appear here after it finishes.</div>`;
+    return;
+  }
+  $('fn-scope').textContent = `${d.analyzed ?? 0} stocks analyzed of ${d.universe_size ?? 0} in strong sectors`;
+  const base = Math.max(d.analyzed || 0, 1);
+  let prev = d.analyzed || 0;
+  $('funnel').innerHTML = f.map((s,i) => {
+    const lost = prev - s.passed; prev = s.passed;
+    const last = i === f.length - 1;
+    return `<div class="step ${last?'final':''} ${s.passed===0?'zero':''}">
+      <div class="n">${i+1}</div>
+      <div><div class="lab"><span>${esc(s.label)}</span><span class="drop">${lost>0?'−'+lost:''}</span></div>
+      <div class="track"><div class="fill" style="width:${(s.passed/base*100).toFixed(1)}%"></div></div></div>
+      <div class="cnt">${s.passed}</div></div>`;
+  }).join('');
+}
+
+function renderSectors(d){
+  const rows = d.sectors || [];
+  if (!rows.length){ $('sectors').innerHTML = `<tr><td class="dim">Sector ranking appears after the first scan.</td></tr>`; return; }
+  $('sec-sub').textContent = `top ${d.criteria?.strong_top_n ?? 4} by 3-month return and above the 50-day average` +
+    (d.spy_ret_3m != null ? ` · SPY ${pct(d.spy_ret_3m)}` : '');
+  $('sectors').innerHTML = rows.map(r => `<tr class="${r.strong?'strong':''}">
+    <td class="rk">${r.rank}</td><td>${esc(r.sector)} <span class="etf">${esc(r.etf)}</span></td>
+    <td class="num ${cls(r.ret_3m)}" style="text-align:right">${pct(r.ret_3m)}</td>
+    <td style="text-align:right">${r.strong ? '<span class="pill gold">Scanning</span>'
+      : r.above_50dma ? '<span class="pill">Rank too low</span>' : '<span class="pill">Below 50-day</span>'}</td></tr>`).join('');
+}
+
+function card(it){
+  const alerted = it.alerted ? `<span class="pill green">Alerted ${esc(it.alert_time||'')}</span>` : `<span class="pill amber">Not sent</span>`;
+  return `<article class="card">
+    <div class="card-head">
+      <div><div class="sym"><a href="${tv(it.symbol)}" target="_blank" rel="noopener">${esc(it.symbol)}</a></div>
+      <div class="cname" title="${esc(it.name)}">${esc(it.name)}</div>
+      <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap"><span class="pill">${esc(it.sector)}</span>${it.partial?'<span class="pill amber">Intraday</span>':''}</div></div>
+      <div class="px"><div class="p">${px(it.price)}</div><div class="c ${cls(it.day_chg)}">${pct(it.day_chg)} today</div><div class="c dim">${money(it.mcap)}</div></div>
+    </div>
+    ${chart(it.spark)}
+    <div class="facts">
+      <div class="fact"><div class="v up">${it.rvol.toFixed(1)}×</div><div class="l">Volume vs 50-day</div></div>
+      <div class="fact"><div class="v">${pct(it.gain_3m,0)}</div><div class="l">3-month gain</div></div>
+      <div class="fact"><div class="v">${it.volatility.toFixed(1)}%</div><div class="l">${esc(it.vol_metric_name)}</div></div>
+    </div>
+    <div class="card-foot"><span>Score <span class="score">${it.score}</span>/100</span>${alerted}</div>
+  </article>`;
+}
+
+function table(items, cols, emptyMsg){
+  if (!items || !items.length) return `<div class="empty">${emptyMsg}</div>`;
+  return `<div class="tw"><table class="t"><thead><tr>${cols.map(c=>`<th class="${c.r?'r':''}">${c.h}</th>`).join('')}</tr></thead>
+    <tbody>${items.map(it=>`<tr>${cols.map(c=>`<td class="${c.r?'r num':''}">${c.f(it)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+const symCell = it => `<a class="s" href="${tv(it.symbol)}" target="_blank" rel="noopener">${esc(it.symbol)}</a> <span class="dim" style="font-size:12px">${esc((it.name||'').slice(0,24))}</span>`;
+const sparkCell = it => `<div style="width:120px">${chart(it.spark,240,60,true)}</div>`;
+
+function render(d){
+  DATA = d;
+  renderStatus(d); renderFunnel(d); renderSectors(d);
+  const sp = d.spikes || [], wa = d.watch || [], hi = d.history || [];
+  $('n-sp').textContent = sp.length; $('n-wa').textContent = wa.length; $('n-hi').textContent = hi.length;
+  $('spikes').innerHTML = sp.length ? `<div class="cards">${sp.map(card).join('')}</div>`
+    : `<div class="empty">${d.updated_et ? 'No stock passes every rule on this scan. The watch list below shows the closest ones.' : 'Start the scanner to look for volume spikes.'}</div>`;
+  $('watch').innerHTML = table(wa, [
+    {h:'Stock', f:symCell},
+    {h:'Sector', f:it=>`<span class="pill gold">${esc(it.sector || '—')}</span>` +
+      (it.sector_info && it.sector_info.rank ? ` <span class="dim num" style="font-size:11px">#${it.sector_info.rank}</span>` : '')},
+    {h:'Chart', f:sparkCell},
+    {h:'Price', r:1, f:it=>px(it.price)}, {h:'Today', r:1, f:it=>`<span class="${cls(it.day_chg)}">${pct(it.day_chg)}</span>`},
+    {h:'Volume vs 50-day', r:1, f:it=>`<span style="color:var(--amber)">${it.rvol.toFixed(2)}×</span>`},
+    {h:'Volume today', r:1, f:it=>vol(it.volume)}, {h:'50-day avg', r:1, f:it=>vol(it.avg_volume)},
+    {h:'3M', r:1, f:it=>pct(it.gain_3m,0)}, {h:'ADR', r:1, f:it=>it.volatility.toFixed(1)+'%'},
+    {h:'Score', r:1, f:it=>`<span class="score">${it.score}</span>`},
+  ], 'No stocks pass rules 1–4 right now.');
+  const stat = {held:'<span class="pill green">Held</span>', faded:'<span class="pill red">Faded</span>',
+    intraday:'<span class="pill amber">Intraday</span>', closed:'<span class="pill">At close</span>'};
+  $('history').innerHTML = table(hi, [
+    {h:'Stock', f:it=>`<a class="s" href="${tv(it.symbol)}" target="_blank" rel="noopener">${esc(it.symbol)}</a>`},
+    {h:'Date', f:it=>`<span class="num">${esc(it.date)}</span>`}, {h:'Time (ET)', f:it=>`<span class="num">${esc(it.time)}</span>`},
+    {h:'Price', r:1, f:it=>px(it.price)}, {h:'Volume', r:1, f:it=>it.rvol.toFixed(1)+'×'},
+    {h:'Score', r:1, f:it=>`<span class="score">${it.score}</span>`}, {h:'Result', f:it=>stat[it.status] || esc(it.status)},
+  ], 'No alerts sent yet. They show up here as soon as one goes to Telegram.');
+  $('log').textContent = (d.log_tail && d.log_tail.length) ? d.log_tail.join('\n') : 'No log yet.';
+}
+
+/* ── data + actions ────────────────────────────────────────────────── */
+async function load(){
+  try{
+    const r = await fetch('/base-scanner/data', {cache:'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    render(await r.json());
+  }catch(e){
+    $('errors').innerHTML = `<div class="banner"><b>Can't reach the KIBO dashboard server.</b> Make sure dashboard.py is running, then this page reconnects on its own.</div>`;
+  }
+  clearTimeout(pollTimer);
+  pollTimer = setTimeout(load, DATA && DATA.scanning ? 3000 : 15000);
+}
+async function act(path, busyText){
+  const t = $('toast'); t.textContent = busyText;
+  try{
+    const r = await fetch(path, {method:'POST'});
+    const j = await r.json();
+    t.textContent = j.msg || (j.ok ? 'Done' : 'Failed');
+  }catch(e){ t.textContent = 'Request failed — is dashboard.py running?'; }
+  setTimeout(() => { t.textContent = ''; }, 6000);
+  setTimeout(load, 1500);
+}
+$('btn-scan').onclick = () => act('/base-scanner/scan', 'Requesting scan…');
+$('btn-toggle').onclick = () => act(DATA && DATA.running ? '/base-scanner/stop' : '/base-scanner/start',
+  DATA && DATA.running ? 'Stopping scanner…' : 'Starting scanner…');
+load();
+</script>
+</body>
+</html>

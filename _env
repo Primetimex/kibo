@@ -1,0 +1,44 @@
+# ── KIBO Trading Agent — Environment Variables ───────────────────────────────
+# 1. Copy this file:   cp .env.example .env
+# 2. Fill in your real values below
+# 3. NEVER share your .env or commit it to GitHub
+
+# ── Polygon.io (market data) ─────────────────────────────────────────────────
+# Free account = 15-min delayed data (fine for testing)
+# Paid Starter ($29/mo) = real-time data (recommended for live trading)
+# Get yours at: https://polygon.io/dashboard/signup
+POLYGON_API_KEY=yUCzVXAU1vTGyKUKg1ljdXh27ODpCN0p
+
+# ── TradeZero Developer API ──────────────────────────────────────────────────
+# Get keys at: https://portal.tradezero.com -> Trade -> Platform Selection -> API Trading
+# Base URL (same for paper and live): https://webapi.tradezero.com
+# Your PUBLIC key (TZ-API-KEY-ID header)
+TZ_API_KEY_ID=a57de38a-3e52-4f1b-b718-64cd1098f4fd
+# Your SECRET key (TZ-API-SECRET-KEY header) — shown ONCE, save immediately
+TZ_API_SECRET_KEY=9EE98FEA7A4E3ABA09CD68612C703E205AFDD767D4A99A47E614818F069F9FBE
+# Your Account ID (shown in portal after logging in)
+TZ_ACCOUNT_ID=TZP098F0
+
+# ── Account Settings ─────────────────────────────────────────────────────────
+# Your actual TradeZero account balance in USD
+ACCOUNT_SIZE=1000000
+
+# ALWAYS start with true. Only change to false after weeks of paper testing.
+PAPER_MODE=true
+
+# ── Telegram Alerts ───────────────────────────────────────────────────────────
+# Step-by-step setup is in README.md Section 4
+# Your bot token from @BotFather (looks like: 123456789:ABCdef...)
+TELEGRAM_BOT_TOKEN=8800696969:AAGTrZhZxlg65YQFdLPwrStcL0yXXatupao
+
+# Your personal Telegram chat ID (a number like 987654321)
+# Get it by messaging @userinfobot on Telegram
+TELEGRAM_CHAT_ID=-5292445882
+
+# ── Alpaca Paper Trading (Futures, ORB v2, Crypto Agent, Kibo Strategy Agent) ─
+# Get keys at: https://app.alpaca.markets -> Paper Trading -> API Keys
+ALPACA_API_KEY=PKFF2G5AYO37Q6FYE3ONPGA44V
+ALPACA_API_SECRET=CccfnoQJQP58DegmHmJoFCgKL8VdKUbNNRUg8h3CLFiL
+APCA_API_KEY_ID=PKFF2G5AYO37Q6FYE3ONPGA44V
+APCA_API_SECRET_KEY=CccfnoQJQP58DegmHmJoFCgKL8VdKUbNNRUg8h3CLFiL
+ALPACA_BASE_URL=https://paper-api.alpaca.markets

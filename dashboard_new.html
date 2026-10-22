@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:system-ui,sans-serif;background:#0a0a0f;color:#e8e8f0;min-height:600px;}
+.dash{display:grid;grid-template-columns:210px 1fr;min-height:600px;}
+.sidebar{background:#111118;border-right:1px solid #1e1e2e;padding:16px 14px;display:flex;flex-direction:column;gap:6px;}
+.kibo-hero{text-align:center;padding:10px 0 16px;border-bottom:1px solid #1e1e2e;margin-bottom:6px;}
+.kibo-hero img{width:120px;height:120px;object-fit:contain;}
+.kibo-name{font-size:17px;font-weight:500;margin-top:6px;color:#f0f0f0;}
+.kibo-tag{font-size:10px;color:#8888aa;margin-top:2px;letter-spacing:0.05em;}
+.kibo-mood{display:inline-block;font-size:10px;margin-top:7px;padding:3px 10px;border-radius:20px;background:rgba(0,230,118,0.12);color:#00e676;border:1px solid rgba(0,230,118,0.25);}
+.nav-section{font-size:9px;font-weight:500;color:#4a4a6a;letter-spacing:0.1em;text-transform:uppercase;padding:10px 10px 3px;}
+.nav-item{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:12px;color:#8888aa;border:none;background:transparent;width:100%;text-align:left;transition:background 0.15s;}
+.nav-item:hover{background:#1a1a28;color:#e8e8f0;}
+.nav-item.active{background:#1a1a28;color:#d4af37;font-weight:500;}
+.pulse-dot{width:6px;height:6px;border-radius:50%;background:#00e676;margin-left:auto;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.75)}}
+.kibo-quote-bar{margin-top:auto;padding-top:12px;border-top:1px solid #1e1e2e;font-size:11px;color:#4a4a6a;text-align:center;line-height:1.6;}
+.main{display:flex;flex-direction:column;}
+.topbar{background:#111118;border-bottom:1px solid #1e1e2e;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;}
+.topbar-title{font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px;}
+.paper-pill{font-size:9px;padding:2px 7px;border-radius:10px;background:rgba(79,195,247,0.12);color:#4fc3f7;border:1px solid rgba(79,195,247,0.25);font-weight:400;}
+.live-pill{display:flex;align-items:center;gap:5px;font-size:10px;color:#00e676;background:rgba(0,230,118,0.1);padding:3px 9px;border-radius:10px;}
+.live-dot{width:5px;height:5px;border-radius:50%;background:#00e676;animation:pulse 1.5s infinite;}
+.clock{font-size:10px;color:#4a4a6a;font-family:monospace;}
+.content{padding:14px 18px;display:flex;flex-direction:column;gap:12px;overflow-y:auto;flex:1;}
+.acct-banner{background:#111118;border:1px solid #1e1e2e;border-radius:12px;padding:12px 16px;display:flex;align-items:center;flex-wrap:wrap;gap:0;}
+.acct-stat{display:flex;flex-direction:column;gap:2px;padding:0 14px;}
+.acct-stat:first-child{padding-left:0;}
+.acct-val{font-size:16px;font-weight:500;font-family:monospace;}
+.acct-lbl{font-size:9px;color:#4a4a6a;text-transform:uppercase;letter-spacing:0.07em;}
+.acct-sep{width:1px;height:32px;background:#1e1e2e;flex-shrink:0;}
+.win{color:#00e676;}.loss{color:#ff4444;}.muted{color:#4a4a6a;}
+.tab-bar{display:flex;gap:2px;border-bottom:1px solid #1e1e2e;padding:0 10px;}
+.tab{padding:7px 12px;font-size:11px;border:none;background:transparent;cursor:pointer;color:#4a4a6a;border-bottom:2px solid transparent;margin-bottom:-1px;}
+.tab.on{color:#d4af37;border-bottom-color:#d4af37;font-weight:500;}
+.cnt{display:inline-block;background:#1e1e2e;border-radius:8px;padding:1px 5px;font-size:9px;margin-left:3px;}
+.panel{background:#111118;border:1px solid #1e1e2e;border-radius:12px;overflow:hidden;}
+table{width:100%;border-collapse:collapse;font-size:11px;}
+th{padding:7px 12px;text-align:left;font-size:9px;color:#4a4a6a;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid #1e1e2e;background:#0e0e16;font-weight:400;}
+td{padding:10px 12px;border-bottom:1px solid #16161f;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:#14141e;}
+.sym{font-weight:500;font-size:12px;color:#f0c84a;font-family:monospace;}
+.badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:4px;font-size:9px;font-weight:500;font-family:monospace;}
+.b-dot{width:4px;height:4px;border-radius:50%;background:currentColor;}
+.b-buy{background:rgba(0,230,118,0.1);color:#00e676;border:1px solid rgba(0,230,118,0.25);}
+.b-sell{background:rgba(79,195,247,0.1);color:#4fc3f7;border:1px solid rgba(79,195,247,0.25);}
+.icc-pill{font-size:9px;padding:2px 6px;border-radius:4px;background:#1e1e2e;color:#8888aa;font-family:monospace;}
+.icc-up{background:rgba(0,230,118,0.08);color:#00e676;}
+.icc-dn{background:rgba(255,68,68,0.08);color:#ff4444;}
+.rt-bar{padding:8px 12px;border-top:1px solid #1e1e2e;background:#0e0e16;display:flex;align-items:center;gap:12px;font-size:10px;color:#4a4a6a;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;}
+.pc{background:#111118;border:1px solid #1e1e2e;border-radius:8px;padding:10px 12px;transition:border-color 0.2s;}
+.pc:hover{border-color:#d4af37;}
+.pc-sym{font-size:10px;font-weight:500;color:#d4af37;margin-bottom:2px;}
+.pc-price{font-size:15px;font-weight:500;font-family:monospace;}
+.pc-chg{font-size:10px;margin-top:2px;font-family:monospace;}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.acard{background:#111118;border:1px solid #1e1e2e;border-radius:12px;padding:12px 14px;}
+.acard-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.acard-name{font-size:12px;font-weight:500;}
+.acard-status{display:flex;align-items:center;gap:4px;font-size:9px;color:#00e676;}
+.acard-row{display:flex;justify-content:space-between;align-items:center;font-size:10px;padding:4px 0;border-bottom:1px solid #16161f;color:#8888aa;}
+.acard-row:last-child{border-bottom:none;}
+.acard-val{font-family:monospace;color:#e8e8f0;}
+.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.75);z-index:200;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.overlay.show{opacity:1;pointer-events:auto;}
+.profit-card{background:#111118;border:1px solid #d4af37;border-radius:16px;padding:24px 40px;text-align:center;transform:scale(0.7);transition:transform 0.35s cubic-bezier(.34,1.56,.64,1);min-width:260px;}
+.overlay.show .profit-card{transform:scale(1);}
+.profit-card img{width:150px;height:150px;object-fit:contain;}
+.profit-num{font-size:38px;font-weight:500;color:#00e676;font-family:monospace;margin:8px 0 4px;}
+.profit-sym{font-size:13px;color:#8888aa;}
+.profit-tag{font-size:11px;color:#d4af37;margin-top:10px;letter-spacing:0.07em;text-transform:uppercase;}
+.profit-close{margin-top:14px;font-size:11px;color:#4a4a6a;cursor:pointer;border:none;background:transparent;}
+</style>
+</head>
+<body>
+
+<div class="overlay" id="overlay" onclick="closeOverlay()">
+  <div class="profit-card" onclick="event.stopPropagation()">
+    <img src="kibo_white.jpg" alt="KIBO">
+    <div class="profit-num" id="overlay-num">+$0.00</div>
+    <div class="profit-sym" id="overlay-sym">profit on SPY</div>
+    <div class="profit-tag">Dream Lucky. Stay Gold.</div>
+    <button class="profit-close" onclick="closeOverlay()">tap to close</button>
+  </div>
+</div>
+
+<div class="dash">
+  <div class="sidebar">
+    <div class="kibo-hero">
+      <img src="kibo_dark.png" alt="KIBO">
+      <div class="kibo-name">KIBO</div>
+      <div class="kibo-tag">Dream Lucky. Stay Gold.</div>
+      <div class="kibo-mood">4 agents running</div>
+    </div>
+    <div class="nav-section">Trading</div>
+    <button class="nav-item active" onclick="showPage('activity')">&#9642; Activity</button>
+    <button class="nav-item" onclick="showPage('prices')">&#9642; Prices</button>
+    <button class="nav-item" onclick="showPage('agents')">&#9642; Agents <span class="pulse-dot"></span></button>
+    <div class="nav-section">System</div>
+    <button class="nav-item" onclick="showPage('settings')">&#9642; Settings</button>
+    <button class="nav-item" onclick="triggerProfit(0.73,'SPY')">&#9642; Test Sound</button>
+    <div class="kibo-quote-bar">Trade the structure,<br>not the noise.</div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="topbar-title" id="page-title">Trading Activity <span class="paper-pill">PAPER</span></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="live-pill"><div class="live-dot"></div>LIVE</div>
+        <div class="clock" id="clock">--:--:-- ET</div>
+      </div>
+    </div>
+
+    <div class="content" id="page-activity">
+      <div class="acct-banner">
+        <div class="acct-stat"><div class="acct-val">$999,993.75</div><div class="acct-lbl">Account Value</div></div>
+        <div class="acct-sep"></div>
+        <div class="acct-stat"><div class="acct-val">$999,265.64</div><div class="acct-lbl">Buying Power</div></div>
+        <div class="acct-sep"></div>
+        <div class="acct-stat"><div class="acct-val loss">-$6.25</div><div class="acct-lbl">Day P&L</div></div>
+        <div class="acct-sep"></div>
+        <div class="acct-stat"><div class="acct-val loss">-$2.86</div><div class="acct-lbl">Unrealized</div></div>
+        <div class="acct-sep"></div>
+        <div class="acct-stat"><div class="acct-val win">+$3.39</div><div class="acct-lbl">Realized</div></div>
+        <div class="acct-sep"></div>
+        <div class="acct-stat"><div class="acct-val muted">$731.50</div><div class="acct-lbl">Exposure</div></div>
+      </div>
+      <div class="panel">
+        <div class="tab-bar">
+          <button class="tab on" id="ti-pos" onclick="switchInner('pos')">Open Positions<span class="cnt">1</span></button>
+          <button class="tab" id="ti-ord" onclick="switchInner('ord')">Today's Orders<span class="cnt">2</span></button>
+        </div>
+        <div id="inner-pos">
+          <table>
+            <thead><tr><th>Symbol</th><th>Action</th><th>Qty</th><th>Avg Entry</th><th>Day P&L</th><th>Total P&L</th><th>ICC</th></tr></thead>
+            <tbody><tr>
+              <td><span class="sym">SPY</span></td>
+              <td><span class="badge b-buy"><span class="b-dot"></span>BOUGHT</span></td>
+              <td style="font-family:monospace">1</td>
+              <td style="font-family:monospace;color:#8888aa">$738.72</td>
+              <td class="loss" style="font-family:monospace">-$2.86</td>
+              <td class="loss" style="font-family:monospace">-$2.86</td>
+              <td><span class="icc-pill icc-up">UPTREND</span></td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div id="inner-ord" style="display:none;">
+          <table>
+            <thead><tr><th>Time ET</th><th>Symbol</th><th>Action</th><th>Qty</th><th>Fill Price</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr>
+                <td style="font-family:monospace;color:#4a4a6a">11:33:57</td>
+                <td><span class="sym">SPY</span></td>
+                <td><span class="badge b-buy"><span class="b-dot"></span>BOUGHT</span></td>
+                <td style="font-family:monospace">1</td>
+                <td style="font-family:monospace">$738.72</td>
+                <td style="font-family:monospace;color:#4fc3f7">OPEN</td>
+              </tr>
+              <tr>
+                <td style="font-family:monospace;color:#4a4a6a">11:34:01</td>
+                <td><span class="sym">SPY</span></td>
+                <td><span class="badge b-sell"><span class="b-dot"></span>SOLD</span></td>
+                <td style="font-family:monospace">1</td>
+                <td style="font-family:monospace">$739.45</td>
+                <td class="win" style="font-family:monospace;font-weight:500">+$0.73</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="rt-bar"><span>Round-Trip P&L</span><span class="win" style="font-family:monospace;font-weight:500">SPY +$0.73</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="page-prices" style="display:none;">
+      <div class="pgrid" id="pgrid"></div>
+    </div>
+
+    <div class="content" id="page-agents" style="display:none;">
+      <div class="agrid">
+        <div class="acard"><div class="acard-hdr"><span class="acard-name">Options Agent</span><div class="acard-status"><span class="pulse-dot" style="margin-left:0"></span>RUNNING</div></div><div class="acard-row"><span>SPY</span><span class="acard-val">$738.72</span></div><div class="acard-row"><span>QQQ</span><span class="acard-val">$715.41</span></div><div class="acard-row"><span>NVDA</span><span class="acard-val">$207.65</span></div><div class="acard-row"><span>ICC</span><span class="icc-pill icc-up">UPTREND</span></div></div>
+        <div class="acard"><div class="acard-hdr"><span class="acard-name">Futures Agent</span><div class="acard-status"><span class="pulse-dot" style="margin-left:0"></span>RUNNING</div></div><div class="acard-row"><span>MGC</span><span class="acard-val">$4,317</span></div><div class="acard-row"><span>MES</span><span class="acard-val">$738.72</span></div><div class="acard-row"><span>MNQ</span><span class="acard-val">$715.41</span></div><div class="acard-row"><span>ICC</span><span class="icc-pill icc-up">UPTREND</span></div></div>
+        <div class="acard"><div class="acard-hdr"><span class="acard-name">ORB Agent v2</span><div class="acard-status"><span class="pulse-dot" style="margin-left:0"></span>RUNNING</div></div><div class="acard-row"><span>XAUUSD</span><span class="acard-val">$4,317</span></div><div class="acard-row"><span>MNQ</span><span class="acard-val">$715.41</span></div><div class="acard-row"><span>ORB Set</span><span class="acard-val" style="color:#00e676">9:35 AM</span></div><div class="acard-row"><span>ICC</span><span class="icc-pill icc-dn">DOWNTREND</span></div></div>
+        <div class="acard"><div class="acard-hdr"><span class="acard-name">Crypto Agent</span><div class="acard-status"><span class="pulse-dot" style="margin-left:0"></span>RUNNING</div></div><div class="acard-row"><span>BTC</span><span class="acard-val">$80,772</span></div><div class="acard-row"><span>ETH</span><span class="acard-val">$2,327</span></div><div class="acard-row"><span>Session</span><span class="acard-val">24/7</span></div><div class="acard-row"><span>ICC</span><span class="icc-pill icc-dn">DOWNTREND</span></div></div>
+      </div>
+    </div>
+
+    <div class="content" id="page-settings" style="display:none;">
+      <div class="panel" style="padding:18px;display:flex;flex-direction:column;gap:14px;">
+        <div style="font-size:12px;font-weight:500;color:#8888aa;text-transform:uppercase;letter-spacing:0.08em;">Sound Alerts</div>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#8888aa;cursor:pointer;">Profit sound on sell<input type="checkbox" id="sound-on" checked style="width:15px;height:15px;cursor:pointer;accent-color:#d4af37;"></label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#8888aa;cursor:pointer;">Signal detected alert<input type="checkbox" checked style="width:15px;height:15px;cursor:pointer;accent-color:#d4af37;"></label>
+        <div style="font-size:12px;font-weight:500;color:#8888aa;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Trading Mode</div>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#8888aa;cursor:pointer;">Paper trading active<input type="checkbox" checked style="width:15px;height:15px;cursor:pointer;accent-color:#d4af37;"></label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PRICES=[
+  {sym:'SPY',p:738.72,c:0.45,pct:0.06},{sym:'QQQ',p:715.41,c:0.81,pct:0.11},
+  {sym:'AAPL',p:300.67,c:0.15,pct:0.05},{sym:'TSLA',p:408.78,c:0.16,pct:0.04},
+  {sym:'NVDA',p:207.65,c:0.03,pct:0.01},{sym:'AMD',p:489.56,c:0.08,pct:0.02},
+  {sym:'MGC',p:4317.29,c:1.51,pct:0.04},{sym:'MCL',p:135.40,c:0.03,pct:0.02},
+  {sym:'MES',p:738.72,c:-0.01,pct:0.00},{sym:'MNQ',p:715.41,c:0.08,pct:0.01},
+  {sym:'XAUUSD',p:4317.29,c:1.51,pct:0.04},{sym:'BTC',p:80772,c:3.00,pct:0.00},
+  {sym:'ETH',p:2327.19,c:0.43,pct:0.02},
+];
+document.getElementById('pgrid').innerHTML=PRICES.map(p=>{
+  const cls=p.c>=0?'win':'loss',sign=p.c>=0?'+':'';
+  const pr=p.p>=1000?'$'+p.p.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:2}):'$'+p.p.toFixed(2);
+  return '<div class="pc"><div class="pc-sym">'+p.sym+'</div><div class="pc-price">'+pr+'</div><div class="pc-chg '+cls+'">'+sign+p.c.toFixed(2)+' <span style="opacity:.65">'+sign+p.pct.toFixed(2)+'%</span></div></div>';
+}).join('');
+
+function showPage(t){
+  ['activity','prices','agents','settings'].forEach(id=>document.getElementById('page-'+id).style.display=id===t?'flex':'none');
+  const titles={activity:'Trading Activity',prices:'Live Prices',agents:'Agents',settings:'Settings'};
+  document.getElementById('page-title').innerHTML=titles[t]+(t==='activity'?' <span class="paper-pill">PAPER</span>':'');
+  document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(b=>{if(b.textContent.trim().startsWith(titles[t].split(' ')[0])||b.onclick?.toString().includes(t))b.classList.add('active');});
+}
+function switchInner(t){
+  ['pos','ord'].forEach(id=>{document.getElementById('inner-'+id).style.display=id===t?'block':'none';document.getElementById('ti-'+id).classList.toggle('on',id===t);});
+}
+function updateClock(){
+  const et=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+  document.getElementById('clock').textContent=et.toTimeString().split(' ')[0]+' ET';
+}
+setInterval(updateClock,1000);updateClock();
+function playWinSound(){
+  if(!document.getElementById('sound-on')?.checked)return;
+  try{
+    const ctx=new(window.AudioContext||window.webkitAudioContext)();
+    [[523.25,0],[659.25,0.12],[783.99,0.24],[1046.5,0.36],[1318.5,0.50]].forEach(([f,t])=>{
+      const o=ctx.createOscillator(),g=ctx.createGain();
+      o.connect(g);g.connect(ctx.destination);o.frequency.value=f;o.type='sine';
+      const st=ctx.currentTime+t;
+      g.gain.setValueAtTime(0,st);g.gain.linearRampToValueAtTime(0.15,st+0.04);g.gain.exponentialRampToValueAtTime(0.001,st+0.32);
+      o.start(st);o.stop(st+0.35);
+    });
+  }catch(e){}
+}
+function triggerProfit(amt,sym){
+  document.getElementById('overlay-num').textContent=(amt>=0?'+$':'-$')+Math.abs(amt).toFixed(2);
+  document.getElementById('overlay-sym').textContent='profit on '+sym;
+  document.getElementById('overlay').classList.add('show');
+  playWinSound();
+}
+function closeOverlay(){document.getElementById('overlay').classList.remove('show');}
+</script>
+</body>
+</html>
